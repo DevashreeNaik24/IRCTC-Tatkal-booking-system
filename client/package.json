@@ -1,0 +1,12 @@
+{
+  "name": "irctc-client",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IRCTC Tatkal Booking System — Frontend (React + Vite + TypeScript). Full implementation lands in Phase 7.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/ --ext .ts,.tsx"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "irctc-tatkal-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-grade IRCTC Tatkal Booking System with admission control, atomic inventory, event-driven payment, and real-time updates",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w client\"",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build": "npm run build -w server && npm run build -w client",
+    "lint": "npm run lint -w server && npm run lint -w client",
+    "test": "npm run test -w server",
+    "db:setup": "npm run db:setup -w server",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
